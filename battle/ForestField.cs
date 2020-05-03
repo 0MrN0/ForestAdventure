@@ -1,26 +1,19 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Security.AccessControl;
-using System.Windows.Forms;
 
 namespace ForestAdv.Domain
 {
-    public enum ForestCell
-    {
-        Empty,
-        Monster
-    }
-
     public class ForestField
     {
-        public ForestCell[,] Field;
-        public Player Hero;
+        public Point[,] Field;
         public List<MonsterCamp> Monsters;
 
         public ForestField(int height, int width, List<MonsterCamp> monsters)
         {
-            Field = new ForestCell[width, height];
-            Hero = new Player();
+            Field = new Point[width, height];
+            for(var i = 0; i < width; i++)
+            for (var j = 0; j < height; j++)
+                Field[i, j] = new Point{X = i, Y = j};
             Monsters = monsters;
         }
 
