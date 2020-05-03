@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 
 namespace ForestAdv.Domain
 {
@@ -29,17 +30,11 @@ namespace ForestAdv.Domain
 
         public void MoveTo(Point point)
         {
-            
+            if (State == GameState.InForest && Forest.InBounds(point))
+                Hero.Location = point;
         }
 
-        public bool IsFight()
-        {
-            if (State != GameState.InForest) return false;
-            var currentPoint = Hero.Location;
-            foreach(var camp in Forest.Monsters)
-                if (currentPoint == camp.Location)
-                    return true;
-            return false;
-        }
+        public bool IsFight() => State == GameState.InForest
+                                 && Forest.Monsters.Any(camp => Hero.Location == camp.Location);
     }
 }
