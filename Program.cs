@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 
 namespace ConsoleApp1
 {
@@ -6,9 +6,7 @@ namespace ConsoleApp1
     {
         static void Main()
         {
-            Console.WriteLine
-            (@"-'start' to start
-- 'exit' to exit");
+            Console.WriteLine("-'start' to start \n- 'exit' to exit");
             var args = Console.ReadLine();
             if (args != "start")
             {
@@ -59,11 +57,11 @@ namespace ConsoleApp1
                     dx = 1;
                 else
                 {
-                    Console.WriteLine("i dont understand");
-                    Console.WriteLine("Press key to continue");
+                    Console.WriteLine("I dont understand \nPress key to continue");
                     Console.ReadKey();
                     continue;
                 }
+
                 game.Forest.MoveTo(dx, dy);
 
                 if (game.Forest.IsNote())
@@ -101,7 +99,7 @@ namespace ConsoleApp1
                         var curCreat = queue.Dequeue();
                         if (curCreat.IsDie)
                             continue;
-                        
+
                         Console.WriteLine("Now " + curCreat.Name + "'s turn");
 
                         if (curCreat.Owner == CreatureOwner.Computer)
@@ -124,6 +122,7 @@ namespace ConsoleApp1
                         queue.Enqueue(curCreat);
                     }
                 }
+
                 game.CheckHero();
                 game.CheckMonsters();
                 if (game.State == GameState.HeroDie)
