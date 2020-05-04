@@ -11,7 +11,7 @@ namespace ConsoleApp1
         static void Main()
         {
             Console.WriteLine
-            ("-'start' to start \n-'exit' to exit");
+            ("-'start' to start \n-'exit' to exit"); 
             var args = Console.ReadLine();
             if (args != "start")
             {
