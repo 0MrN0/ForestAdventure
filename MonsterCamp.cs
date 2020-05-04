@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using System.Drawing;
 
-namespace ForestAdv.Domain
+namespace ConsoleApp1
 {
     public class MonsterCamp
     {
