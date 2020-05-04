@@ -42,46 +42,42 @@ namespace ConsoleApp1
         public void InitForestField()
         {
             var slime = new Creature
-                (CreatureOwner.Computer, CreatureName.Slime, 200, 70, 10, 30);
+                (CreatureOwner.Computer, CreatureName.Slime, 200, 5, 10, 15);
             var skeleton = new Creature
-                 (CreatureOwner.Computer, CreatureName.Skeleton, 150, 30, 0, 70);
+                 (CreatureOwner.Computer, CreatureName.Skeleton, 150, 70, 0, 5);
             var penguin = new Creature
-                 (CreatureOwner.Computer, CreatureName.Penguin, 250, 0, 0, 40);
-            var gunter = new Creature
-                (CreatureOwner.Computer, CreatureName.Gunter, 500, 50, 10, 50);
-            var mrTree = new Creature
-                (CreatureOwner.Computer, CreatureName.MrTree, 1000, 10, 50, 10);
-            var necromancer = new Creature
-                (CreatureOwner.Computer, CreatureName.Necromancer, 750, 75, 20, 75);
+                 (CreatureOwner.Computer, CreatureName.Penguin, 250, 5, 25, 10);
 
             var team1 = new List<Creature> {new Creature(slime), new Creature(skeleton), new Creature(slime)};
             var team2 = new List<Creature> {new Creature(penguin), new Creature(slime), new Creature(penguin)};
             var team3 = new List<Creature> {new Creature(skeleton), new Creature(penguin), new Creature(skeleton)};
-            var gunBoss = new List<Creature> {new Creature(penguin), gunter, new Creature(penguin)};
-            var treeBoss = new List<Creature> {new Creature(slime), mrTree, new Creature(slime)};
-            var necroBoss = new List<Creature> {new Creature(skeleton), necromancer, new Creature(skeleton)};
 
             var camps = new HashSet<MonsterCamp>
             {
-                new MonsterCamp(team1, new Point(5, 1)),
-                //new MonsterCamp(team2, new Point(1, 3)),
-                // new MonsterCamp(team3, new Point(8, 2)),
-                // new MonsterCamp(gunBoss, new Point(8, 8)),
-                // new MonsterCamp(treeBoss, new Point(1, 7)),
-                // new MonsterCamp(necroBoss, new Point(5, 4))
+                new MonsterCamp(team1, new Point(3, 0)),
+                new MonsterCamp(team2, new Point(4, 1)),
+                new MonsterCamp(team3, new Point(1, 4))
             };
             
             var carrots = new HashSet<Carrot>
             {
-                new Carrot(new Point(7, 2)),
+                new Carrot(new Point(0, 2)),
                 new Carrot(new Point(0, 4)),
-                new Carrot(new Point(4, 5)),
-                new Carrot(new Point(0, 9)),
-                new Carrot(new Point(9, 9))
+                new Carrot(new Point(4, 0))
             };
             
+            var walls = new HashSet<Point>
+            {
+                new Point(1, 0),
+                new Point(1, 2),
+                new Point(1, 3),
+                new Point(0, 3),
+                new Point(3, 1),
+                new Point(3, 3),
+            };
+
             State = GameState.InForest;
-            Forest = new ForestField(10, 10, camps, carrots);
+            Forest = new ForestField(10, 10, camps, carrots, walls);
         }
 
         public void InitBattle()
@@ -107,16 +103,16 @@ namespace ConsoleApp1
         }
     }
 }
-//               хп, лак, деф, тычка
-// Эльф:		350, 50, 15, 75
-// Кролик:		450, 40, 35, 50
-// Енот:		100, 100, 0, 100
-// Кошак:		666, 0, 50, 0
+//               хп, лак, рег, тычка
+// Эльф:		750, 50, 15, 75
+// Кролик:		750, 40, 35, 50
+// Енот:		450, 100, 5, 100
+// Кошак:		1000, 0, 50, 0
 //
-// Пингвин:	    250, 30, 25, 40
-// Слайм:		200, 70, 10, 30
-// Скелет:		150, 30, 0, 70
+// Пингвин:	    250, 5, 25, 10
+// Слайм:		200, 5, 10, 15
+// Скелет:		150, 70, 0, 5
 //
 // Гюнтер:		500, 50, 10, 50
-// ДеРеВо:		1000, 10, 50, 10
-// Некромант:	750, 75, 20, 75
+// ДеРеВо:		1000, 10, 50, 5
+// Некромант:	750, 75, 0, 75
