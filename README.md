@@ -1,6 +1,6 @@
 You play for little Elf, he accidentally got into this forest, you have to help him get home.
 Moving on the map using the keyboard, along the way you will be caught by friendly characters or enemies, be careful!
-You may also find bafes for your characters. 
+You may also find buffs for your characters. 
 Each of your team has 3 units for pumping:
 Luck (affects the order of moves in battles),
 Strength (affects the amount of damage you inflict on the enemy),
