@@ -1,9 +1,10 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using ConsoleApp1;
 
-namespace ConsoleApp1
+namespace ForestAdventure
 {
     public enum GameState
     {
