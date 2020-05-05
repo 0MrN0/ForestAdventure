@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+﻿﻿using System.Drawing;
 
 namespace ForestAdventure
 {
@@ -12,8 +12,8 @@ namespace ForestAdventure
     public class Note
     {
         public Point Location;
-        public string Story;
-        public Boss BossToOpen;
+        public readonly string Story;
+        public readonly Boss BossToOpen;
 
         public Note(Point location, string story, Boss boss)
         {

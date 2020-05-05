@@ -1,19 +1,10 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 
 namespace ForestAdventure
 {
-    public enum GameState
-    {
-        NotStarted,
-        InForest,
-        InBattle,
-        HeroDie,
-        MonstersDie
-    }
-
     public class Game
     {
         public GameState State;

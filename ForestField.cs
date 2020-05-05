@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,11 +7,11 @@ namespace ForestAdventure
 {
     public class ForestField
     {
-        public Point[,] Field;
+        public readonly Point[,] Field;
         public HashSet<MonsterCamp> Monsters;
         public Player Hero;
         public HashSet<Carrot> Carrots;
-        public HashSet<Point> Walls;
+        public readonly HashSet<Point> Walls;
         public HashSet<Note> Notes;
 
         public ForestField

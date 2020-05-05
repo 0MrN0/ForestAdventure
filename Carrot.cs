@@ -1,20 +1,12 @@
-﻿using System;
+﻿﻿using System;
 using System.Drawing;
 
 namespace ForestAdventure
 {
-    public enum Attribute
-    {
-        Hp = 0,
-        Luck = 1,
-        Defence = 2,
-        Strenght = 3
-    }
-
     public class Carrot
     {
-        public int Increment;
-        public Attribute Attribute;
+        public readonly int Increment;
+        public readonly Attribute Attribute;
         public Point Location;
 
         public Carrot(Point location)

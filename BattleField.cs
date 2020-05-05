@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,9 +16,9 @@ namespace ForestAdventure
         }
 
         public Queue<Creature> GetQueue() => new Queue<Creature>(PlayerTeam
-            .Union(ComputerTeam)
-            .OrderByDescending(x => x.Luck)
-            .ToList());
+                                   .Union(ComputerTeam)
+                                   .OrderByDescending(x => x.Luck)
+                                   .ToList());
 
         public Creature ChooseTarget(List<Creature> team)
         {
