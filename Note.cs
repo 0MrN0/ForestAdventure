@@ -1,7 +1,6 @@
-﻿﻿using System.Data.Common;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace ConsoleApp1
+namespace ForestAdventure
 {
     public enum Boss
     {

@@ -1,7 +1,6 @@
 ﻿using System;
-using ForestAdventure;
 
-namespace ConsoleApp1
+namespace ForestAdventure
 {
     class Program
     {

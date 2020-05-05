@@ -1,6 +1,6 @@
 ﻿﻿using NUnit.Framework;
 
-namespace ConsoleApp1
+ namespace ForestAdventure
 {
     public class CreatureTest
     {

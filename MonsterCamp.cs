@@ -1,7 +1,7 @@
-﻿﻿using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
 
-namespace ConsoleApp1
+namespace ForestAdventure
 {
     public class MonsterCamp
     {

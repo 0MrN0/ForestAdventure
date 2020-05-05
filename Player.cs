@@ -1,8 +1,7 @@
-﻿﻿using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 
-namespace ConsoleApp1
+namespace ForestAdventure
 {
     public class Player
     {

@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+ using ForestAdventure;
+ using Attribute = ForestAdventure.Attribute;
 
-namespace ConsoleApp1
+ namespace ConsoleApp1
 {
     public class ForestField
     {

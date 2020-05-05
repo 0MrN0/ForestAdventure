@@ -1,7 +1,7 @@
-﻿﻿using System;
+﻿using System;
 using System.Drawing;
 
-namespace ConsoleApp1
+namespace ForestAdventure
 {
     public enum Attribute
     {
