@@ -5,9 +5,9 @@
     public class CreatureTest
     {
         [Test]
-        public void H()
+        public void rrr()
         {
-            Assert.AreEqual(true, true);
+            
         }
     }
 }

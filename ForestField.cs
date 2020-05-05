@@ -1,11 +1,9 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
- using ForestAdventure;
- using Attribute = ForestAdventure.Attribute;
 
- namespace ConsoleApp1
+namespace ForestAdventure
 {
     public class ForestField
     {

@@ -6,7 +6,7 @@ namespace ForestAdventure
     {
         static void Main()
         {
-            Console.WriteLine("-'start' to start \n- 'exit' to exit");
+            Console.WriteLine("-'start' to start \n- 'exit' to exit\n");
             var args = Console.ReadLine();
             if (args != "start")
             {
@@ -89,6 +89,8 @@ namespace ForestAdventure
                 if (game.Forest.IsMonster())
                 {
                     Console.WriteLine("Panic! Monsters!!!");
+                    Console.WriteLine("Press the key to join the battle");
+                    Console.ReadKey();
                     game.InitBattle();
                     var queue = game.Battle.GetQueue();
                     while (!game.Battle.IsEndBattle())
