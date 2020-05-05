@@ -6,7 +6,7 @@ namespace ForestAdventure
     {
         static void Main()
         {
-            Console.WriteLine("-'start' to start \n- 'exit' to exit\n");
+            Console.WriteLine("-'start' to start \n- 'exit' to exit");
             var args = Console.ReadLine();
             if (args != "start")
             {

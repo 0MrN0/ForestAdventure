@@ -68,7 +68,7 @@ namespace ForestAdventure
             };
 
             State = GameState.InForest;
-            Forest = new ForestField(10, 10, camps, carrots, walls);
+            Forest = new ForestField(5, 5, camps, carrots, walls);
         }
 
         public void InitBattle()
